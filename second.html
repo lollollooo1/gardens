@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gardens - موقع البستنة</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#eef5ef;
+}
+
+/* الهيدر */
+header{
+    background:linear-gradient(to right,#2e7d32,#66bb6a);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* القائمة */
+nav{
+    background:#1b5e20;
+    text-align:center;
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    margin:15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* الأقسام */
+section{
+    padding:30px;
+}
+
+/* كروت */
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    width:300px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+/* الفورم */
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:5px 0;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+button{
+    background:#2e7d32;
+    color:white;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1b5e20;
+}
+
+/* الفوتر */
+footer{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* responsive */
+@media (max-width:700px){
+    .container{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+</style>
+
+<script>
+function sendMessage(){
+    alert("تم إرسال رسالتك بنجاح!");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>🌿 Gardens</h1>
+    <p>أفضل موقع لصناديق البستنة للمبتدئين والهواة</p>
+</header>
+
+<nav>
+    <a href="#about">عن الشركة</a>
+    <a href="#services">الخدمات</a>
+    <a href="#boxes">الصناديق</a>
+    <a href="#contact">تواصل</a>
+</nav>
+
+<section id="about">
+    <h2>عن الشركة</h2>
+    <p>
+        نحن شركة متخصصة في البستنة نقدم منتجات ونصائح لمساعدتك على زراعة النباتات بسهولة.
+    </p>
+</section>
+
+<section id="services">
+    <h2>الخدمات</h2>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1524594154908-edd3f7fcb5dc">
+            <div class="card-content">
+                <h3>نصائح زراعة</h3>
+                <p>تعلم كيفية زراعة النباتات خطوة بخطوة.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+            <div class="card-content">
+                <h3>صيانة الحدائق</h3>
+                <p>نساعدك تحافظ على حديقتك جميلة.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
+            <div class="card-content">
+                <h3>استشارات أونلاين</h3>
+                <p>تواصل معنا واحصل على نصائح مباشرة.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="boxes">
+    <h2>الصناديق</h2>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf">
+            <div class="card-content">
+                <h3>Oddbox</h3>
+                <p>خضروات أسبوعية بأسعار مناسبة.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1492496913980-501348b61469">
+            <div class="card-content">
+                <h3>Flourish</h3>
+                <p>بذور + أدوات زراعة + منتجات طبيعية.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+            <div class="card-content">
+                <h3>Cottage</h3>
+                <p>صندوق شهري للزهور والنباتات.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>تواصل معنا</h2>
+
+    <form onsubmit="sendMessage(); return false;">
+        <input type="text" placeholder="الاسم" required>
+        <input type="email" placeholder="الإيميل" required>
+        <textarea placeholder="رسالتك" required></textarea>
+        <button type="submit">إرسال</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Gardens</p>
+</footer>
+
+</body>
+</html>
